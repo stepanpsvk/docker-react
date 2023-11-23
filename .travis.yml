@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t testBuild -f Dockerfile.dev .
+  - docker build -t stepanposhyvak/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true testBuild npm run test
+  - docker run -e CI=true stepanposhyvak/docker-react npm run test
